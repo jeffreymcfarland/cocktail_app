@@ -1,7 +1,7 @@
 // Set up MySQL connection.
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host: `${process.env.JM_HOST}`,
   port: process.env.JM_PORT,
   user: `${process.env.JM_USER}`,
