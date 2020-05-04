@@ -7,5 +7,6 @@ USE cocktail_db;
 CREATE TABLE cocktails(
     id INT NOT NULL AUTO_INCREMENT,
     cocktail_name VARCHAR(75) NOT NULL,
-    drank BOOLEAN NOT NULL DEFAULT false
+    drank BOOLEAN NOT NULL DEFAULT false,
+    PRIMARY KEY(id)
 );
