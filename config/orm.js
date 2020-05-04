@@ -16,6 +16,13 @@ const orm = {
             cb(result);
         });
     },
+    update: function(objVal, condition, cb) {
+        const queryString = "UPDATE cocktails SET drank = ? WHERE id = ?"
+        connection.query(queryString, [objVal, condition], function(err, result) {
+          if (err) throw err;
+          cb(result);
+        });
+    },
     delete: function(tableName, condition, cb) {
         const queryString = "DELETE FROM ?? WHERE id = ?";
         connection.query(queryString, [tableName, condition], function(err, result) {

@@ -19,6 +19,25 @@ $(function() {
         );
     });
 
+    $(".change-drank").on("click", function(event) {
+      const id = $(this).data("id");  
+      const newDrankState = {
+        drank: 1
+      };
+  
+      // Send the PUT request.
+      $.ajax("/api/new/" + id, {
+        type: "PUT",
+        data: newDrankState
+      }).then(
+        function() {
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+  
+
     $(".delete-drink").on("click", function(event) {
         const id = $(this).data("id");
     

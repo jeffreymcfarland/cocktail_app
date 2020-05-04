@@ -9,20 +9,28 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-4">
-      <h4>Cocktails to try</h4>
-      <ul>
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <div class="row d-flex justify-content-center mb-3">
+        <h4>Cocktails to try</h4>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <ul>
         {{#each cocktail}}
           <li>
             <p>ID: {{id}}</p>
             <p>Cocktail: {{cocktail_name}}</p>
             <p>Have tried: {{drank}}</p>
+            <button class="change-drank" data-id="{{id}}">
+            TRIED
+            </button>
             <button class="delete-drink" data-id="{{this.id}}">DELETE!</button>
           </li>
         {{/each}}
       </ul>
+      </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mt-5 mb-5 text-center">
       <h2>Add a Drink</h2>
       <form class="create-form">
 
@@ -34,9 +42,24 @@
         <button type="submit">Add Drink</button>
       </form>
     </div>
-    <div class="col-md-4">
-      <h4>Cocktails tried</h4>
+    <div class="col-md-3">
+      <div class="row d-flex justify-content-center mb-3">
+        <h4>Cocktails tried</h4>
+      </div>
+        <div class="row d-flex justify-content-center">
+          <ul>
+            {{#each triedCocktails}}
+              <li>
+                <p>ID: {{id}}</p>
+                <p>Cocktail: {{cocktail_name}}</p>
+                <p>Have tried: {{drank}}</p>
+                <button class="delete-drink" data-id="{{this.id}}">DELETE!</button>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
     </div>
+    <div class="col-md-1"></div>
   </div>
 </div>
 

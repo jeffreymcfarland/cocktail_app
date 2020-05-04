@@ -12,6 +12,11 @@ var cocktail = {
         cb(res);
     });
   },
+  update: function(objVal, condition, cb) {
+    orm.update(objVal, condition, function(res) {
+      cb(res);
+    });
+  },
   delete: function(condition, cb) {
     orm.delete("cocktails", condition, function(res) {
       cb(res);
