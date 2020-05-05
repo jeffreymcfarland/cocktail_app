@@ -1,0 +1,56 @@
+.title-div{
+    background-image: url("/assets/img/bartop-img.png");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+.title-words{
+    font-family: 'Prata', serif;
+    color: #ffffff;
+    font-size: 62px;
+    -webkit-text-stroke: .5px black;
+}
+
+.sub-title{
+    color: #ffffff;
+}
+
+.font{
+    font-family: 'Comfortaa', cursive;
+}
+
+.icon{
+    position: relative;
+    width:40px;
+    height:40px;
+    cursor: pointer;
+}
+
+.olive-icon{
+    position: relative;
+    width: 35px;
+    height: 70px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.title-words{
+    z-index: 1;
+}
+
+.icons-main{
+    position: absolute;
+}
+
+.image1{
+    z-index: 3;
+}
+
+.image2{
+    z-index: 1;
+}
+
+.list{
+    list-style-type:none;
+}

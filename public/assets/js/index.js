@@ -51,6 +51,14 @@ $(function() {
           }
         );
       });
+
+    $(".full-drink").mouseenter(function() {
+        $(this).addClass("fadeOut").removeClass("fadeIn");
+    });
+
+    $(".full-drink").mouseleave(function() {
+      $(this).addClass("fadeIn").removeClass("fadeOut");
+  });
     
 });
 

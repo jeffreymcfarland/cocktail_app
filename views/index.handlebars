@@ -1,59 +1,55 @@
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <h1>Shaken OR Stirred</h1>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <h2>Make a list of cocktails to try</h2>
+
+<div class="container-fluid title-div">
+  <div class="row text-center text-align-left">
+    <div class="col-md-1"></div>
+    <div class="col-md-6 col-9 mt-2 mt-sm-5">
+      <h1 class="title-words">Shaken <span><img src="/assets/img/olive.png" alt="olive" class="olive-icon"></span>r Stirred</h1>
+      <p class="sub-title font mt-n3 mt-sm-4">Make a list of cocktails you've never had but have always wanted to try.</p>
+    </div>
+    <div class="col-md-5 col-3"></div>
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container font mt-5">
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-3">
       <div class="row d-flex justify-content-center mb-3">
-        <h4>Cocktails to try</h4>
+        <h4>Wish List</h4>
       </div>
+      <hr>
       <div class="row d-flex justify-content-center">
-        <ul>
+        <ul class="list">
         {{#each cocktail}}
-          <li>
-            <p>ID: {{id}}</p>
-            <p>Cocktail: {{cocktail_name}}</p>
-            <p>Have tried: {{drank}}</p>
-            <button class="change-drank" data-id="{{id}}">
-            TRIED
-            </button>
-            <button class="delete-drink" data-id="{{this.id}}">DELETE!</button>
+          <li class="mb-3"><span class="icons-main"><a><img src="/assets/img/full-drink.png" alt="full drink" class="change-drank icon image1 full-drink animated faster" data-id="{{id}}"></span></a><a><img src="/assets/img/empty-drink.png" alt="empty drink" class="change-drank icon image2" data-id="{{id}}"></a>{{cocktail_name}}
           </li>
         {{/each}}
       </ul>
       </div>
     </div>
     <div class="col-md-4 mt-5 mb-5 text-center">
-      <h2>Add a Drink</h2>
-      <form class="create-form">
+      <div class="border border-info rounded-lg p-4">
+        <h2>Cocktail Name:</h2>
+        <form class="create-form">
 
-        <div class="form-group">
-          <label>Cocktail Name:</label>
-          <input type="text" id="new-drink" name="name">
-        </div>
+          <div class="form-group">
+            <input type="text" class="border" id="new-drink" name="name">
+          </div>
 
-        <button type="submit">Add Drink</button>
-      </form>
+          <button type="submit" class="btn btn-outline-info">Add Drink</button>
+        </form>
+      </div>
     </div>
     <div class="col-md-3">
       <div class="row d-flex justify-content-center mb-3">
-        <h4>Cocktails tried</h4>
+        <h4>Tried List</h4>
       </div>
-        <div class="row d-flex justify-content-center">
-          <ul>
+      <hr>
+        <div class="row ml-n5 d-flex justify-content-center">
+          <ul class="list">
             {{#each triedCocktails}}
-              <li>
-                <p>ID: {{id}}</p>
-                <p>Cocktail: {{cocktail_name}}</p>
-                <p>Have tried: {{drank}}</p>
-                <button class="delete-drink" data-id="{{this.id}}">DELETE!</button>
+              <li class="mb-3">
+                <a><img src="assets/img/delete.png" alt="delete drink" class="delete-drink icon" data-id="{{this.id}}"></a>{{cocktail_name}}
               </li>
             {{/each}}
           </ul>
