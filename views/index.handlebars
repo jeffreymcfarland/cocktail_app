@@ -30,7 +30,7 @@
     <div class="col-md-4 mt-5 mb-5 text-center">
       <div class="border border-info rounded-lg p-4">
         <h2>Cocktail Name:</h2>
-        <form class="create-form">
+        <form autocomplete="off" class="create-form">
 
           <div class="form-group">
             <input type="text" class="border" id="new-drink" name="name">
@@ -45,7 +45,7 @@
         <h4>Tried List</h4>
       </div>
       <hr>
-        <div class="row ml-n5 d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
           <ul class="list">
             {{#each triedCocktails}}
               <li class="mb-3">
