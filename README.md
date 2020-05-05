@@ -10,11 +10,11 @@ This full-stack application allows a user to add cocktails to a "wish list" to k
 
 ### Desktop 
 
-![desktop screenshot](public/assets/img/desktop-screenshot.png)
+<kbd><img src="public/assets/img/desktop-screenshot.png" alt="desktop screenshot"></kdb>
 
 ### Mobile
 
-<img src="public/assets/img/mobile-screenshot.png" alt="mobile screenshot" width="300">
+<kbd><img src="public/assets/img/mobile-screenshot.png" alt="mobile screenshot" width="300"></kbd>
 
 
 ***
