@@ -1,33 +1,40 @@
+/* Background image for title */
 .title-div{
     background-image: url("/assets/img/bartop-img.png");
     background-position: center;
     background-size: cover;
     height: 300px;
 }
-
+/* Title words styles */
 .title-words{
     font-family: 'Prata', serif;
     color: #ffffff;
-    font-size: 62px;
+    font-size: 65px;
     -webkit-text-stroke: .5px black;
     text-shadow: 2px 2px 4px #000000;
+    z-index: 1;
 }
-
+/* Color style for subtitle */
 .sub-title{
     color: #ffffff;
 }
-
+/* Font style for all text but title */
 .font{
     font-family: 'Comfortaa', cursive;
 }
-
+/* Styles for list icons */
 .icon{
     position: relative;
-    width:40px;
-    height:40px;
+    width:30px;
+    height:30px;
     cursor: pointer;
 }
-
+/* Style for delete icon to make smaller than other icons */
+.delete-drink{
+    width:22.5px;
+    height:20px;
+}
+/* Olive icon styles */
 .olive-icon{
     position: relative;
     width: 35px;
@@ -35,11 +42,7 @@
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
-
-.title-words{
-    z-index: 1;
-}
-
+/* Styles to create empty glass hover effect */
 .icons-main{
     position: absolute;
 }
@@ -51,7 +54,12 @@
 .image2{
     z-index: 1;
 }
-
+/* Take off bullet points for listed items */
 .list{
     list-style-type:none;
+}
+/* Shadow style for list cards */
+.card{
+    box-shadow: 2px 2px 5px #686868;
+    width: 100%;
 }

@@ -2,9 +2,9 @@
 <div class="container-fluid title-div">
   <div class="row text-center text-align-left">
     <div class="col-md-1"></div>
-    <div class="col-md-6 col-9 mt-2 mt-sm-5">
-      <h1 class="title-words">Shaken <span><img src="/assets/img/olive.png" alt="olive" class="olive-icon"></span>r Stirred</h1>
-      <p class="sub-title font mt-n3 mt-sm-4">Make a list of cocktails you've never had but have always wanted to try.</p>
+    <div class="col-md-6 col-8 mt-2 mt-sm-5">
+      <h1 class="title-words">Shaken <span><img src="/assets/img/olive.png" alt="olive" class="olive-icon">r</span> Stirred</h1>
+      <p class="sub-title font mt-n4 mt-sm-4">Make a list of cocktails you've never had but have always wanted to try.</p>
     </div>
     <div class="col-md-5 col-3"></div>
   </div>
@@ -12,23 +12,21 @@
 
 <div class="container font mt-5">
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-3">
-      <div class="row d-flex justify-content-center mb-3">
-        <h4>Wish List</h4>
-      </div>
-      <hr>
-      <div class="row d-flex justify-content-center">
-        <ul class="list">
-        {{#each cocktail}}
-          <li class="mb-3"><span class="icons-main"><a><img src="/assets/img/full-drink.png" alt="full drink" class="change-drank icon image1 full-drink animated faster" data-id="{{id}}"></span></a><a><img src="/assets/img/empty-drink.png" alt="empty drink" class="change-drank icon image2" data-id="{{id}}"></a>{{cocktail_name}}
-          </li>
-        {{/each}}
-      </ul>
+
+    <div class="col-md-4 order-3 order-sm-2 d-flex justify-content-center">
+      <div class="card mb-5" style="max-width: 18rem;">
+        <div class="card-header d-flex justify-content-center"><h5 class="pt-2">Wish List</h5></div>
+          <ul class="list list-group list-group-flush">
+          {{#each cocktail}}
+            <li class="list-group-item mb-3 pr-3 d-flex justify-content-between"><span class="icons-main"><a><img src="/assets/img/full-drink.png" alt="full drink" class="change-drank icon image1 full-drink animated faster" data-id="{{id}}"></span></a><a><img src="/assets/img/empty-drink.png" alt="empty drink" class="change-drank icon image2" data-id="{{id}}"></a>{{cocktail_name}}
+            </li>
+          {{/each}}
+          </ul>
       </div>
     </div>
-    <div class="col-md-4 mt-5 mb-5 text-center">
-      <div class="border border-info rounded-lg p-4">
+
+    <div class="col-md-4 mt-2 mb-5 text-center order-2 order-sm-3">
+      <div>
         <h2>Cocktail Name:</h2>
         <form autocomplete="off" class="create-form">
 
@@ -40,22 +38,20 @@
         </form>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="row d-flex justify-content-center mb-3">
-        <h4>Tried List</h4>
+
+    <div class="col-md-4 order-4 order-sm-4 d-flex justify-content-center align-items-stretch">
+      <div class="card mb-5" style="max-width: 18rem;">
+        <div class="card-header d-flex justify-content-center"><h5 class="pt-2">Tried List</h5></div>
+        <ul class="list list-group list-group-flush">
+          {{#each triedCocktails}}
+            <li class="list-group-item mb-3 pr-3 d-flex justify-content-between">
+              {{cocktail_name}}<a><img src="assets/img/delete.png" alt="delete drink" class="delete-drink icon" data-id="{{this.id}}"></a>
+            </li>
+          {{/each}}
+        </ul>
       </div>
-      <hr>
-        <div class="row d-flex justify-content-center">
-          <ul class="list">
-            {{#each triedCocktails}}
-              <li class="mb-3">
-                <a><img src="assets/img/delete.png" alt="delete drink" class="delete-drink icon" data-id="{{this.id}}"></a>{{cocktail_name}}
-              </li>
-            {{/each}}
-          </ul>
-        </div>
     </div>
-    <div class="col-md-1"></div>
+    
   </div>
 </div>
 
