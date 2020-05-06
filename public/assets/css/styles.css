@@ -63,3 +63,9 @@
     box-shadow: 2px 2px 5px #686868;
     width: 100%;
 }
+/* Making subtitle text smaller to fit on smallest mobile screen */
+@media (max-width:320px) {
+    .sub-title{
+    font-size: 13.5px;
+    }
+}
