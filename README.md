@@ -5,6 +5,8 @@
 
 This full-stack application allows a user to add cocktails to a "wish list" to keep track of any cocktail they have never had but have always wanted to try. It also lets them move those cocktails, after they try them, to a "tried list". The app is hosted on heroku and utilizes JawsDB to keep a SQL database of the cocktail names and values to indicate if they have been tried yet or not. 
 
+Live Link: [https://shaken-or-stirred.herokuapp.com/](https://shaken-or-stirred.herokuapp.com/)
+
 ***
 ## Preview
 
